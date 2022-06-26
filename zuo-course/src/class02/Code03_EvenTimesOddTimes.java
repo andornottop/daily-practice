@@ -2,7 +2,7 @@ package class02;
 
 public class Code03_EvenTimesOddTimes {
 
-	// arrÖĞ£¬Ö»ÓĞÒ»ÖÖÊı£¬³öÏÖÆæÊı´Î
+	// arrä¸­ï¼Œåªæœ‰ä¸€ç§æ•°ï¼Œå‡ºç°å¥‡æ•°æ¬¡
 	public static void printOddTimesNum1(int[] arr) {
 		int eor = 0;
 		for (int i = 0; i < arr.length; i++) {
@@ -11,18 +11,18 @@ public class Code03_EvenTimesOddTimes {
 		System.out.println(eor);
 	}
 
-	// arrÖĞ£¬ÓĞÁ½ÖÖÊı£¬³öÏÖÆæÊı´Î
+	// arrä¸­ï¼Œæœ‰ä¸¤ç§æ•°ï¼Œå‡ºç°å¥‡æ•°æ¬¡
 	public static void printOddTimesNum2(int[] arr) {
 		int eor = 0;
 		for (int i = 0; i < arr.length; i++) {
 			eor ^= arr[i];
 		}
-		// a ºÍ bÊÇÁ½ÖÖÊı
+		// a å’Œ bæ˜¯ä¸¤ç§æ•°
 		// eor != 0
-		// eor×îÓÒ²àµÄ1£¬ÌáÈ¡³öÀ´
+		// eoræœ€å³ä¾§çš„1ï¼Œæå–å‡ºæ¥
 		// eor :     00110010110111000
 		// rightOne :00000000000001000
-		int rightOne = eor & (-eor); // ÌáÈ¡³ö×îÓÒµÄ1
+		int rightOne = eor & (-eor); // æå–å‡ºæœ€å³çš„1
 		
 		
 		int onlyOne = 0; // eor'
