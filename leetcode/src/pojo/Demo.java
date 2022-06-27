@@ -1,11 +1,12 @@
-package day220624;
+package pojo;
 
-import javax.swing.tree.TreeNode;
 
 public class Demo {
     public static void main(String[] args) {
         System.out.println("6667893627");
-    
+
+
+
     }
 
     void traverse(TreeNode root) {
