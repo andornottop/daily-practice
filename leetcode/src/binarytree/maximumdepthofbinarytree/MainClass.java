@@ -1,10 +1,8 @@
-package binarytreepreordertraversal;
+package binarytree.maximumdepthofbinarytree;
 
 import pojo.TreeNode;
 
-import java.io.IOException;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 public class MainClass {
@@ -14,21 +12,21 @@ public class MainClass {
         if (input.length() == 0) {
             return null;
         }
-    
+
         String[] parts = input.split(",");
         String item = parts[0];
         TreeNode root = new TreeNode(Integer.parseInt(item));
         Queue<TreeNode> nodeQueue = new LinkedList<>();
         nodeQueue.add(root);
-    
+
         int index = 1;
-        while(!nodeQueue.isEmpty()) {
+        while (!nodeQueue.isEmpty()) {
             TreeNode node = nodeQueue.remove();
-    
+
             if (index == parts.length) {
                 break;
             }
-    
+
             item = parts[index++];
             item = item.trim();
             if (!item.equals("null")) {
@@ -36,11 +34,11 @@ public class MainClass {
                 node.left = new TreeNode(leftNumber);
                 nodeQueue.add(node.left);
             }
-    
+
             if (index == parts.length) {
                 break;
             }
-    
+
             item = parts[index++];
             item = item.trim();
             if (!item.equals("null")) {
@@ -51,31 +49,16 @@ public class MainClass {
         }
         return root;
     }
-    
-    public static String integerArrayListToString(List<Integer> nums, int length) {
-        if (length == 0) {
-            return "[]";
-        }
-    
-        String result = "";
-        for(int index = 0; index < length; index++) {
-            Integer number = nums.get(index);
-            result += Integer.toString(number) + ", ";
-        }
-        return "[" + result.substring(0, result.length() - 2) + "]";
-    }
-    
-    public static String integerArrayListToString(List<Integer> nums) {
-        return integerArrayListToString(nums, nums.size());
-    }
-    
-    public static void main(String[] args) throws IOException {
+
+    public static void main(String[] args) {
+
         TreeNode root = stringToTreeNode("[3,9,20,null,null,15,7]");
 
-        List<Integer> ret = new Solution().preorderTraversal(root);
-            
-            String out = integerArrayListToString(ret);
-            
-            System.out.print(out);
+        int ret = new Solution().maxDepth(root);
+
+        String out = String.valueOf(ret);
+
+        System.out.print(out);
+
     }
 }

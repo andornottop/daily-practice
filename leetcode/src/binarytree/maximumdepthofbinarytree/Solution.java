@@ -1,4 +1,4 @@
-package maximumdepthofbinarytree;
+package binarytree.maximumdepthofbinarytree;
 
 import pojo.TreeNode;
 

@@ -1,4 +1,4 @@
-package diameterofbinarytree;
+package binarytree.diameterofbinarytree;
 
 import pojo.TreeNode;
 

@@ -1,4 +1,4 @@
-package binarytreepreordertraversal;
+package binarytree.binarytreepreordertraversal;
 
 import pojo.TreeNode;
 import java.util.ArrayList;

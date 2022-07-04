@@ -1,8 +1,7 @@
-package maximumdepthofbinarytree;
+package binarytree.diameterofbinarytree;
 
 import pojo.TreeNode;
 
-import java.io.IOException;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -51,15 +50,14 @@ public class MainClass {
         return root;
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
+        TreeNode root = stringToTreeNode("[1,2,3,4,5]");
 
-        TreeNode root = stringToTreeNode("[3,9,20,null,null,15,7]");
-
-        int ret = new Solution().maxDepth(root);
+        int ret = new Solution().diameterOfBinaryTree(root);
 
         String out = String.valueOf(ret);
 
         System.out.print(out);
-
     }
+
 }

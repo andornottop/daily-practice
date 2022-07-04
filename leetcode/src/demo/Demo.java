@@ -1,10 +1,16 @@
-package pojo;
+package demo;
 
+
+import pojo.TreeNode;
+
+import java.util.Arrays;
 
 public class Demo {
     public static void main(String[] args) {
         System.out.println("6667893627");
 
+        TreeNode[] arr = new TreeNode[5];
+        System.out.println(Arrays.toString(arr));
 
 
     }
