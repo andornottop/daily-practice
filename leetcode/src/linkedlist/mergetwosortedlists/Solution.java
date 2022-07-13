@@ -6,6 +6,7 @@ class Solution {
 
     /**
      * 递归
+     *
      * @param list1
      * @param list2
      * @return
@@ -25,24 +26,31 @@ class Solution {
         }
     }
 
-    public ListNode mergeTwoListsIteration(ListNode list1,ListNode list2){
-        ListNode sentry = new ListNode(-1);
+    /**
+     * 迭代
+     *
+     * @param list1
+     * @param list2
+     * @return
+     */
+    public ListNode mergeTwoListsIteration(ListNode list1, ListNode list2) {
+        ListNode sentry = new ListNode(-1);//哨兵
 
-        ListNode p = sentry;
-        while(list1 != null && list2 != null){
-            if (list1.val<list2.val){
+        ListNode p = sentry;//指针
+        while (list1 != null && list2 != null) {
+            if (list1.val < list2.val) {
                 p.next = list1;
-                list1 =  list1.next;
+                list1 = list1.next;
             } else {
                 p.next = list2;
-                list2 =  list2.next;
+                list2 = list2.next;
             }
             p = p.next;
         }
-        if (list1 == null){
+        if (list1 == null) {
             p.next = list2;
         }
-        if (list2 == null){
+        if (list2 == null) {
             p.next = list1;
         }
         return sentry.next;
