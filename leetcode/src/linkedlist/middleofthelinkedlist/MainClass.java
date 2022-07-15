@@ -1,4 +1,4 @@
-package linkedlist.mergetwosortedlists;
+package linkedlist.middleofthelinkedlist;
 
 import pojo.ListNode;
 
@@ -9,14 +9,12 @@ public class MainClass {
 
     public static void main(String[] args) {
 
-        ListNode list1 = stringToListNode("[1,2]");
-        ListNode list2 = stringToListNode("[3,4]");
+        ListNode head = stringToListNode("");
 
-        ListNode ret = new Solution().mergeTwoListsIteration(list1, list2);
+        ListNode ret = new Solution().middleNode(head);
 
         String out = listNodeToString(ret);
 
         System.out.print(out);
-
     }
 }
