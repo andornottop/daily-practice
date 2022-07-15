@@ -9,7 +9,7 @@ public class MainClass {
 
     public static void main(String[] args) {
 
-        ListNode head = stringToListNode("");
+        ListNode head = stringToListNode("[1,2,3,4]");
 
         ListNode ret = new Solution().middleNode(head);
 
