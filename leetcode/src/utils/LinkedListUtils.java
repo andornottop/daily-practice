@@ -67,4 +67,8 @@ public class LinkedListUtils {
         return dummyRoot.next;
     }
 
+    public static String booleanToString(boolean input) {
+        return input ? "True" : "False";
+    }
+
 }
